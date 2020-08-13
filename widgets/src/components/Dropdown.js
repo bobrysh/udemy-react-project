@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './Dropdown.css'
 
-const Dropdown = ({ options, selected, onSelectedChange, title }) => {
+const Dropdown = ({ options, selected, onSelectedChange, title, coloredText }) => {
 
   const [open, setOpen] = useState(false)
   const ref = useRef();
@@ -56,7 +57,9 @@ const Dropdown = ({ options, selected, onSelectedChange, title }) => {
         </div>
       </div>
       <div>
-        {/* <h1 style={{color:`${selected.value}`}}>Colored Text</h1> */}
+        <h1 style={{color:`${selected.value}`}} className={`${coloredText ? 'visible' : 'hidden' }`}>
+        Colored Text
+        </h1> 
       </div>
     </div>
   );

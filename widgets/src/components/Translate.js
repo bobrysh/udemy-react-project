@@ -38,6 +38,7 @@ const Translate = () => {
         selected={language}
         onSelectedChange={setLanguage}
         options={options}
+        coloredText={false}
       />
       <hr />
       <h3 className="ui header">Output</h3>
